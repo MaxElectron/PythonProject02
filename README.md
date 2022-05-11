@@ -28,3 +28,12 @@ How to install python and python packages:
       - sudo apt install build-essential libssl-dev libffi-dev python3-dev
       - sudo pip install flask
 - Launch the file with python
+
+On content:
+ - There are currently
+ - app.py which is the main file
+ - templates.zip which contains folder needed for app.py to run
+ - Two HTML files, copied from the templates folder, for easier review
+
+Notice:
+ - There is currently no save feature, which may be implemented later via databases
