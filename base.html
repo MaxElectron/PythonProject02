@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VirtualPet_3.14</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <style>
+      body {
+        font-family: 'Roboto Mono', serif;
+        font-size: 4.5vw;
+      }
+      * {
+          box-sizing: border-box;
+      }
+      .btn_action {
+          width: 70%;
+          height: 15vh;
+      }
+      .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+      }
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+    </style>
+    <script>
+    setTimeout(function(){
+        window.location.href = '{{ redirect_url }}';
+    }, {{ redirect_time }});
+    </script>
+</head>
+<body>
+<div class="row">
+
+<div class="column">
+<div align="center">
+    <pre>
+  ^~^  ,
+ ({{ cat_face }}) )
+ /   \/
+(\|||/)</pre>
+</div>
+
+<p align="center"><b>{{ pet_name }}</b></p>
+    <p align="center"><i>{{ pet_status }}</i></p>
+</div>
+
+<div class="column">
+    <div align="right">
+        {{ hunger_display }} <a href='/feed'><button class = "btn_action">Feed</button></a> <br><br>
+        {{ experience_display }} <a href='/train'><button class = "btn_action">Train</button></a> <br><br>
+        {{ tiredness_display }} <a href='/sleep'><button class = "btn_action">Sleep</button></a> <br><br>
+        {{ happiness_display }} <a href='/play'><button class = "btn_action">Play</button></a>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
